@@ -5,19 +5,24 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the 1 no : ");
-        int a = sc.nextInt();
-        System.out.println("Enter the 2 no : ");
-        int b = sc.nextInt();
-        System.out.println("Enter the 3 no : ");
-        int c = sc.nextInt();
-        if (a > b && a > c) {
-            System.out.println("The no : " + a + " Largest no");
-        } else if (b > a && b > c) {
-            System.out.println("The no : " + b + " Largest no");
-        } else {
-            System.out.println("The no : " + c + " Largest no");
+        System.out.println("Enter the Rows & Col : ");
+        int row = sc.nextInt();
+        int col = sc.nextInt();
+
+        int[][] array = new int[row][col];
+        System.out.println("Enter the elements :");
+
+        for (int i = 0; i < row; i++)
+            for (int j = 0; j < col; j++)
+                array[i][j] = 5;
+
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
         }
     }
 }
