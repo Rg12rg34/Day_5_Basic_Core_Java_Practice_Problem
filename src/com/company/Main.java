@@ -5,14 +5,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
-        int powerof2 = 1;
+        double add = 0.0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the No : ");
-        int no = sc.nextInt();
-        for (int p = 0; p <= no; p++) {
-            System.out.println("No is : " + p + " Power of 2 is : " + powerof2);
-            powerof2 = 2 * powerof2;
+        double no = sc.nextDouble();
+        for (int p = 1; p <= no; p++) {
+            add = add + (1.0 / p);
         }
+        System.out.println("The Harmonic of " + no + " is : " + add);
     }
 }
