@@ -1,25 +1,18 @@
 package com.company;
-import java.util.Random;
+//import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        int headwin = 0;
-        int tailwin = 0;
-        Random value = new Random();
-        for (int p = 0; p < 15; p++) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the year : ");
+        int year = sc.nextInt();
 
-            int flip = value.nextInt(2);
-            if (flip < 0.5) {
-                tailwin++;
-
-            } else {
-                headwin++;
-
-            }
+        if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+            System.out.println("year is leap year");
+        } else {
+            System.out.println("year is not leap year");
         }
-        System.out.println("Tail" + tailwin);
-        System.out.println("Head" + headwin);
     }
-
 }
