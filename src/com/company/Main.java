@@ -4,14 +4,20 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
-        double add = 0.0;
+    public static void main(String args[]) {
+
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the No : ");
-        double no = sc.nextDouble();
-        for (int p = 1; p <= no; p++) {
-            add = add + (1.0 / p);
+        System.out.println("Enter a number ::");
+        int no = sc.nextInt();
+
+        for (int p = 2; p < no; p++) {
+            while (no % p == 0) {
+                System.out.println(p + " ");
+                no = no / p;
+            }
         }
-        System.out.println("The Harmonic of " + no + " is : " + add);
+        if (no > 2) {
+            System.out.println(no);
+        }
     }
 }
