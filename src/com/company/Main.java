@@ -5,24 +5,12 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the Rows & Col : ");
-        int row = sc.nextInt();
-        int col = sc.nextInt();
+        System.out.println("Enter point A & B : ");
+        double a = sc.nextDouble();
+        double b = sc.nextDouble();
 
-        int[][] array = new int[row][col];
-        System.out.println("Enter the elements :");
-
-        for (int i = 0; i < row; i++)
-            for (int j = 0; j < col; j++)
-                array[i][j] = 5;
-
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                System.out.print(array[i][j] + " ");
-            }
-            System.out.println();
-        }
+        double DistCal = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+        System.out.println("The Distance is :  " + DistCal);
     }
 }
